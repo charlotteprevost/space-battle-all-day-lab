@@ -82,7 +82,7 @@ const game = {
 			// get rid off dead alien (shift), get me the next alien
 			game.alienShips.shift();
 			// say alien is dead, there are x aliens left
-			console.log("alien is dead");
+			console.log(`Alien ship is dead!`);
 		} 
 
 		// if there are aliens left
@@ -96,9 +96,12 @@ const game = {
 				// see if user wants to keep going to give up		
 				game.continueFight();
 
+			} else if (!USSAssembly.isAlive()){
+				console.log("A little suffering is good for the soul...");
 			}
+
 		} else {
-			console.log("win...i guess");
+			console.log("Win! Now GO!");
 		}
 	},
 	
